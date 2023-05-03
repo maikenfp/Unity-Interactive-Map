@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5e551c0f0bfdaa141b67442dba61718e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startingPosition: {fileID: 11400000, guid: d4172eba36fda0f4c9b51be4dfe63e7e, type: 2}
+  - changedegres: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
