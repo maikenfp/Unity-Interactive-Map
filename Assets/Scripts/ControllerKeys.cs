@@ -16,14 +16,16 @@ public class ControllerKeys
     /// <param name="inputVector"></param>
     /// <param name="cameraAngel"></param>
     /// <returns>inputVector</returns>
-    public Vector2 ControllerAngelASWD(Vector2 inputVector, int cameraAngel)
+    public Vector2 ControllerAngelASWD(Vector2 inputVector, int cameraAngle)
     {
-
-        if (cameraAngel == 45)
+        //if camera is sett to 45 degrees use this controller
+        if (cameraAngle == 45)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
+                //witch direction the player is going 
                 inputVector.y = +1;
+                //sett angle of the player 
                 playerAngle = new Vector3(0, 0, 0);
             }
 
@@ -44,25 +46,22 @@ public class ControllerKeys
             }
         }
 
-        if (cameraAngel == -135)
+        if (cameraAngle == -135)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 inputVector.y = -1;
                 playerAngle = new Vector3(0, 180, 0);
             }
-
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 inputVector.y = +1;
                 playerAngle = new Vector3(0, 0, 0);
-
             }
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 inputVector.x = +1;
                 playerAngle = new Vector3(0, 90, 0);
-
             }
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
@@ -71,15 +70,13 @@ public class ControllerKeys
             }
         }
 
-        if (cameraAngel == -45)
+        if (cameraAngle == -45)
         {
-
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 inputVector.x = -1;
                 playerAngle = new Vector3(0, -90, 0);
             }
-
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 inputVector.x = +1;
@@ -89,7 +86,6 @@ public class ControllerKeys
             {
                 inputVector.y = -1;
                 playerAngle = new Vector3(0, 180, 0);
-
             }
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
@@ -98,7 +94,7 @@ public class ControllerKeys
             }
         }
 
-        if (cameraAngel == 135)
+        if (cameraAngle == 135)
         {
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -106,7 +102,6 @@ public class ControllerKeys
                 inputVector.x = +1;
                 playerAngle = new Vector3(0, 90, 0);
             }
-
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 inputVector.x = -1;
@@ -122,10 +117,7 @@ public class ControllerKeys
                 inputVector.y = -1;
                 playerAngle = new Vector3(0, 180, 0);
             }
-
         }
-
-
         return inputVector;
     }
 
@@ -133,7 +125,7 @@ public class ControllerKeys
     /// this methode returns the direction the player is facing
     /// </summary>
     /// <returns>playerAngle</returns>
-    public Vector3 GetAngel()
+    public Vector3 GetAngle()
     {
         return playerAngle;
     }

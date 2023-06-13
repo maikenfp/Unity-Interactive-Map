@@ -11,15 +11,17 @@ public class CameraContorller : MonoBehaviour
 
     /// <param name="changedegres"> ScriptableObject holding the camera angel </param>
     [SerializeField]
-    public DegreisScriptabelObject changedegres;
+    public DegreeScriptabelObject changedegres;
 
     private void OnEnable()
     {
+        //using the ScriptableObject to change camera angle
         changedegres.ChangeCameraAngle.AddListener(ChagneCam);
     }
 
     private void OnDisable()
     {
+        //using the ScriptableObject to change camera andgle
         changedegres.ChangeCameraAngle.RemoveListener(ChagneCam);
     }
 

@@ -4,20 +4,21 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-/// <summary>
-/// Class <c>OutlineSelection</c> sett this script on object with interactebel Dialog
-/// </summary>
+// <summary>
+// Class <c>OutlineSelection</c> put this script on object with interacteble Dialog
+// </summary>
 public class OutlineSelection : MonoBehaviour
 {
-    /// <param name="highlight"> changes color </param>
+    // <param name="highlight"> changes color </param>
     private Transform highlight;
 
-    /// <param name="selection"> if the object dont have outline </param>
+    // <param name="selection"> if the object dont have outline </param>
     private Transform selection;
 
-    /// <param name="raycastHit"> send a signal to a point on screen </param>
+    // <param name="raycastHit"> send a signal to a point on screen </param>
     private RaycastHit raycastHit;
 
+    // when the character with Player tag enters the collider with the set trigger, it highlights the object if object has a Selectable tag. 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -44,6 +45,7 @@ public class OutlineSelection : MonoBehaviour
         }
     }
 
+    // highligh is turned off when Player exits the triggered area
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))

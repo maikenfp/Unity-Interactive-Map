@@ -28,6 +28,7 @@ public class Teleport : MonoBehaviour
     public GameObject podkastBtn;
 
     // Start is called before the first frame update
+    // Each room listed is a button action. When button is clicked, said room is loaded and places character in chosen position.
     void Start()
     {
         //MAKERSPACE
